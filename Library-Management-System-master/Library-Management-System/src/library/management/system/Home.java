@@ -25,7 +25,7 @@ public class Home extends JFrame implements ActionListener{
             
             JMenuBar menuBar = new JMenuBar();
             menuBar.setBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(0, 128, 0), new Color(128, 128, 128)));
-            menuBar.setBackground(Color.CYAN);
+            menuBar.setBackground(Color.decode("#7A37F0"));
             menuBar.setBounds(0, 10, 1000, 35);
             contentPane.add(menuBar);
 
@@ -84,7 +84,7 @@ public class Home extends JFrame implements ActionListener{
 
             
             JLabel l1 = new JLabel("Library Management System");
-            l1.setForeground(new Color(204, 51, 102));
+            l1.setForeground(Color.decode("#7A37F0"));
             l1.setFont(new Font("Segoe UI Semilight", Font.BOLD, 30));
             l1.setBounds(268, 30, 701, 80);
             contentPane.add(l1);
@@ -121,7 +121,7 @@ public class Home extends JFrame implements ActionListener{
             b1.setBounds(60, 320, 159, 44);
             contentPane.add(b1);
 
-            b2 = new JButton("Record Book");
+            b2 = new JButton("Records");
             b2.addActionListener(this);
             b2.setBackground(Color.decode("#7A37F0"));
             b2.setForeground(Color.WHITE);
@@ -144,27 +144,27 @@ public class Home extends JFrame implements ActionListener{
 
             b4 = new JButton("Issue Book");
             b4.addActionListener(this);
-            b4.setBackground(Color.BLACK);
+            b4.setBackground(Color.decode("#7A37F0"));
             b4.setForeground(Color.WHITE);
             b4.setBounds(76, 620, 143, 41);
             contentPane.add(b4);
 
             b5 = new JButton("Return Book");
             b5.addActionListener(this);
-            b5.setBackground(Color.BLACK);
+            b5.setBackground(Color.decode("#7A37F0"));
             b5.setForeground(Color.WHITE);
             b5.setBounds(310, 620, 159, 41);
             contentPane.add(b5);
 
             b6 = new JButton("About Us");
             b6.addActionListener(this);
-            b6.setBackground(Color.BLACK);
+            b6.setBackground(Color.decode("#7A37F0"));
             b6.setForeground(Color.WHITE);
             b6.setBounds(562, 620, 159, 41);
             contentPane.add(b6);
 
             JLabel l5 = new JLabel("");
-            ImageIcon i10  = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/book_issue.jpeg"));
+            ImageIcon i10  = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/undraw_Bookshelves_re_lxoy.png"));
             Image i11 = i10.getImage().getScaledInstance(150, 150,Image.SCALE_DEFAULT);
             ImageIcon i12 = new ImageIcon(i11);
             l5 = new JLabel(i12);
@@ -172,7 +172,7 @@ public class Home extends JFrame implements ActionListener{
             contentPane.add(l5);
 
             JLabel l6 = new JLabel("");
-            ImageIcon i13  = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/sixth.png"));
+            ImageIcon i13  = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/undraw_Books_l33t.png"));
             Image i14 = i13.getImage().getScaledInstance(150, 150,Image.SCALE_DEFAULT);
             ImageIcon i15 = new ImageIcon(i14);
             l6 = new JLabel(i15);
@@ -180,7 +180,7 @@ public class Home extends JFrame implements ActionListener{
             contentPane.add(l6);
 
             JLabel l7 = new JLabel("");
-            ImageIcon i16  = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/seventh.png"));
+            ImageIcon i16  = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/undraw_team_ih79.png"));
             Image i17 = i16.getImage().getScaledInstance(150, 150,Image.SCALE_DEFAULT);
             ImageIcon i18 = new ImageIcon(i17);
             l7 = new JLabel(i18);

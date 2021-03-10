@@ -133,7 +133,7 @@ public class BookDetails extends JFrame implements ActionListener{
             conn con = new conn();
             if(ae.getSource() == b1){
              
-                String sql = "select * from book where concat(bname, book_id) like ?";
+                String sql = "select * from book where concat(name, book_id) like ?";
 		PreparedStatement st = con.c.prepareStatement(sql);
 		st.setString(1, "%" + search.getText() + "%");
 		ResultSet rs = st.executeQuery();
