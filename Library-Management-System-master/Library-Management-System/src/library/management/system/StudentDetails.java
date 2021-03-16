@@ -65,10 +65,10 @@ public class StudentDetails extends JFrame implements ActionListener{
 	table.setFont(new Font("Trebuchet MS", Font.BOLD, 16));
 	scrollPane.setViewportView(table);
 
-	JButton b1 = new JButton("Search");
+	JButton b1 = new JButton("Student");
 	b1.addActionListener(this);
 	b1.setBorder(new LineBorder(new Color(255, 20, 147), 2, true));
-	ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/eight.png"));
+	ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/"));
         Image i2 = i1.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         b1.setIcon(i3);
@@ -77,9 +77,9 @@ public class StudentDetails extends JFrame implements ActionListener{
 	b1.setBounds(564, 89, 138, 33);
 	contentPane.add(b1);
 
-	JButton b2 = new JButton("Delete");
+	JButton b2 = new JButton("Details");
 	b2.addActionListener(this);
-	ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/nineth.png"));
+	ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/"));
         Image i5 = i4.getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT);
         ImageIcon i6 = new ImageIcon(i5);
         b2.setIcon(i6);
@@ -138,7 +138,7 @@ public class StudentDetails extends JFrame implements ActionListener{
             
             conn con = new conn();
             if( ae.getSource() == b1){
-                String sql = "select * from student where concat(name, student_id) like ?";
+                String sql = "select * from student where concat(sname, student_id) like ?";
 		PreparedStatement st = con.c.prepareStatement(sql);
 		st.setString(1, "%" + search.getText() + "%");
 		ResultSet rs = st.executeQuery();
@@ -149,7 +149,7 @@ public class StudentDetails extends JFrame implements ActionListener{
             }
     
             if(ae.getSource() == b2){
-                String sql = "delete from student where name = '" + search.getText() + "'";
+                String sql = "delete from student where sname = '" + search.getText() + "'";
 		PreparedStatement st = con.c.prepareStatement(sql);
 
 		JDialog.setDefaultLookAndFeelDecorated(true);

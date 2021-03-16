@@ -7,6 +7,7 @@ import net.proteanit.sql.DbUtils;
 import java.sql.*;
 import java.awt.event.*;
 
+
 public class BookDetails extends JFrame implements ActionListener{
 
     private JPanel contentPane;
@@ -18,6 +19,7 @@ public class BookDetails extends JFrame implements ActionListener{
 	new BookDetails().setVisible(true);
     }
     
+    // shows all books
     public void Book() {
 	try {
             conn con = new conn();
@@ -33,8 +35,8 @@ public class BookDetails extends JFrame implements ActionListener{
 	
 	}
     }
-
-    public BookDetails() {
+    
+    public BookDetails() {                
         setBounds(350, 200, 890, 475);
         contentPane = new JPanel();
         contentPane.setBackground(Color.WHITE);
@@ -59,10 +61,10 @@ public class BookDetails extends JFrame implements ActionListener{
 	table.setFont(new Font("Trebuchet MS", Font.BOLD, 16));
 	scrollPane.setViewportView(table);
 
-	JButton b1 = new JButton("Search");
+	JButton b1 = new JButton("Book");
 	b1.addActionListener(this);
 	b1.setBorder(new LineBorder(new Color(255, 20, 147), 2, true));
-	ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/eight.png"));
+	ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/"));
         Image i2 = i1.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         b1.setIcon(i3);
@@ -71,9 +73,9 @@ public class BookDetails extends JFrame implements ActionListener{
 	b1.setBounds(564, 89, 138, 33);
 	contentPane.add(b1);
 
-	JButton b2 = new JButton("Delete");
+	JButton b2 = new JButton("Details");
 	b2.addActionListener(this);
-	ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/nineth.png"));
+	ImageIcon i4 = new ImageIcon(ClassLoader.getSystemResource("library/management/system/icons/"));
         Image i5 = i4.getImage().getScaledInstance(30, 30, Image.SCALE_DEFAULT);
         ImageIcon i6 = new ImageIcon(i5);
         b2.setIcon(i6);
@@ -126,6 +128,8 @@ public class BookDetails extends JFrame implements ActionListener{
         panel.setBackground(Color.WHITE);
 	Book();
     }
+   
+    
     
     public void actionPerformed(ActionEvent ae){
         try{
@@ -168,4 +172,5 @@ public class BookDetails extends JFrame implements ActionListener{
             
         }
     }
+    
 }
